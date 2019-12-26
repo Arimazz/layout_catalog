@@ -12,7 +12,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   height: 60px;
   padding: 0 50px;
@@ -22,24 +22,26 @@ body {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   margin-bottom: 50px; }
-  .header--logo {
+  .header__logo {
     height: 40px;
     vertical-align: middle; }
 
-.nav--menu {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .nav--menu-item {
+  .nav__list_item {
+    list-style: none;
+    margin-left: 20px; }
+  .nav__list_link {
+    display: block;
     color: #000;
     font-weight: 500;
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 60px; }
-    .nav--menu-item:not(:last-of-type) {
-      margin-right: 20px; }
-    .nav--menu-item:hover {
+    .nav__list_link:hover {
       color: #00acdc; }
 
 .is-active {
@@ -55,13 +57,10 @@ body {
     border-radius: 8px;
     background: #00acdc; }
 
-.list-wrapper {
+.catalog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1000px;
@@ -70,29 +69,29 @@ body {
 .card {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
-  font-family: roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 200px;
   background: #fff;
   padding: 14px;
   margin: 0 24px 50px; }
-  .card--image {
+  .card__image {
     -ms-flex-item-align: center;
         align-self: center;
     width: 160px;
     height: 134px;
     margin: 16px 5px 0; }
-  .card--name {
+  .card__name {
     display: inline-block;
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
     margin-top: 41px; }
-  .card--id {
+  .card__id {
     display: inline-block;
     font-size: 11px;
     line-height: 13px;
     margin-top: 5px; }
-  .card .review--box {
+  .card .review-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -100,19 +99,17 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 14px; }
-    .card .review--box-stars {
+    .card .review-box__stars {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .card .review--box-stars .star {
+      .card .review-box__stars .star {
         background: url("../images/star.svg") no-repeat 15px;
         background-position: center;
         height: 15px;
         width: 15px;
         margin-right: 4px; }
-        .card .review--box-stars .star:nth-child(-n+4) {
-          background-image: url("../images/star-active.svg"); }
-    .card .review--box-reviews {
+    .card .review-box__reviews {
       font-size: 11px;
       line-height: 13px;
       -ms-flex-item-align: center;
@@ -128,19 +125,19 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 20px; }
-    .card .price-box--name {
+    .card .price-box__name {
       font-size: 11px;
       line-height: 13px; }
-    .card .price-box--price {
+    .card .price-box__price {
       font-size: 16px;
       font-weight: bold;
       line-height: 19px; }
-  .card--link {
+  .card__link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 20px; }
-  .card--buy-button {
+  .card__buy-button {
     border: 1px solid #00acdc;
     border-radius: 5px;
     width: 100%;
@@ -151,9 +148,21 @@ body {
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase; }
-    .card--buy-button:hover {
+    .card__buy-button:hover {
       border: 1px solid #00acdc;
       background: #fff;
       color: #00acdc; }
+
+.stars__1 .star:nth-child(-n+1) {
+  background-image: url("../images/star-active.svg"); }
+
+.stars__2 .star:nth-child(-n+2) {
+  background-image: url("../images/star-active.svg"); }
+
+.stars__3 .star:nth-child(-n+3) {
+  background-image: url("../images/star-active.svg"); }
+
+.stars__4 .star:nth-child(-n+4) {
+  background-image: url("../images/star-active.svg"); }
 
 /*# sourceMappingURL=main.css.map */
